@@ -1,20 +1,15 @@
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: false, // ⬅ SPA mode (important!)
 
   app: {
     baseURL: '/',
   },
 
-  css: ['~/assets/css/tailwind.css'],
+  css: [
+    '~/assets/css/tailwind.css'
+  ],
 
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {}
-    }
-  },
-
-  nitro: {
-    preset: 'static'
-  }
+  modules: [
+    '@nuxtjs/tailwindcss'
+  ]
 });
