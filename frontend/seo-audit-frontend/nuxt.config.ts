@@ -1,14 +1,26 @@
 export default defineNuxtConfig({
-  nitro: { preset: "netlify" },
+  ssr: false,   // disable server-side rendering (SPA mode)
 
   app: {
-    head: {
-      script: [
-        {
-          src: "https://cdn.tailwindcss.com",
-          defer: false
-        }
-      ]
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/'
+  },
+
+  css: ['~/assets/css/tailwind.css'],
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
     }
+  },
+
+  // ensure SPA behaviour for Netlify
+  routeRules: {
+    '/**': { prerender: false }
+  },
+
+  nitro: {
+    preset: 'static',   // ⬅ correct preset for static output in Nuxt 4
   }
-})
+});
