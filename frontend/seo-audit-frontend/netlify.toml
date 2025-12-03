@@ -2,7 +2,6 @@
   command = "npm run generate"
   publish = "dist"
 
-# Required for SPA routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
