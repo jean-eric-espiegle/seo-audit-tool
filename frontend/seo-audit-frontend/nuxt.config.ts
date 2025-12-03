@@ -1,11 +1,13 @@
 export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss"],
-
   css: ["~/assets/css/tailwind.css"],
-
-//   devtools: { enabled: true },
-
+// devtools: { enabled: true },
   nitro: {
-    preset: "netlify"
+    preset: "netlify",
+    serveStatic: true, // 👈 THIS FIXES THE MISSING BUILD FOLDER
+  },
+
+  build: {
+    transpile: ["@nuxtjs/tailwindcss"]
   }
 });
