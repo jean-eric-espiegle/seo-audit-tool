@@ -1,8 +1,7 @@
 [build]
   command = "npm run build"
-  publish = "dist"
+  publish = ".netlify/build"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[functions]
+  directory = ".netlify/functions-internal"
+  node_bundler = "esbuild"
