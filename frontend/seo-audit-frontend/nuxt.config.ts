@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 
   modules: ["@nuxtjs/tailwindcss"],
 
-  css: ["~/assets/css/tailwind.css"],   // This now works
+  css: ["~/app/assets/css/tailwind.css"],   // This now works
 
   app: {
     head: {
