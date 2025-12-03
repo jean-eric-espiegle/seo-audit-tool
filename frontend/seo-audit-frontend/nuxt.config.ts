@@ -1,7 +1,14 @@
 export default defineNuxtConfig({
-  nitro: {
-    preset: 'netlify'
-  },
+  nitro: { preset: "netlify" },
 
-  devtools: { enabled: false }
+  app: {
+    head: {
+      script: [
+        {
+          src: "https://cdn.tailwindcss.com",
+          defer: false
+        }
+      ]
+    }
+  }
 })
