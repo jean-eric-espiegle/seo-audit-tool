@@ -1,9 +1,8 @@
 export default defineNuxtConfig({
-  ssr: false,   // disable server-side rendering (SPA mode)
+  ssr: false,
 
   app: {
     baseURL: '/',
-    buildAssetsDir: '/_nuxt/'
   },
 
   css: ['~/assets/css/tailwind.css'],
@@ -15,12 +14,7 @@ export default defineNuxtConfig({
     }
   },
 
-  // ensure SPA behaviour for Netlify
-  routeRules: {
-    '/**': { prerender: false }
-  },
-
   nitro: {
-    preset: 'static',   // ⬅ correct preset for static output in Nuxt 4
+    preset: 'static'
   }
 });

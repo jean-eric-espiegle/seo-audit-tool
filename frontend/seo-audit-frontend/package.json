@@ -2,13 +2,16 @@
   "name": "seo-audit-frontend",
   "type": "module",
   "private": true,
+  
   "scripts": {
     "build": "nuxt build",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "dev": "nuxt dev",
     "postinstall": "nuxt prepare"
-  }
+  
+}
+
 ,
   "dependencies": {
     "nuxt": "^4.2.1",
