@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   nitro: {
-    preset: "netlify"
+  preset: "netlify",
+  output: {
+    publicDir: ".netlify/publish"
+  }
   },
 
   modules: ["@nuxtjs/tailwindcss"],
